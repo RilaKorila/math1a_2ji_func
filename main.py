@@ -25,14 +25,14 @@ with st.form(key='my_form'):
     # Every form must have a submit button.
     submit_button = st.form_submit_button(label='Check')
     if submit_button:
-        x = np.linspace(-100.0,100.0,1000.0)
+        x = np.linspace(-100.0,100.0,1000)
         fig = plt.figure()
         ax = fig.add_subplot(111)
 
         ax.set_xlim([-30.0, 30.0])
         ax.set_ylim([-50.0, 50.0])
         
-        ax.plot(x, int(a_input)*(x - int(p_input))**2 + int(q_input))
+        ax.plot(x, a_input*(x - p_input)**2.0 + q_input)
         ax.axhline(linewidth=1, color='black')
         ax.axvline(linewidth=1, color='black')
         st.pyplot(fig)
