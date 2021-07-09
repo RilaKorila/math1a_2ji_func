@@ -14,11 +14,11 @@ with st.form(key='my_form'):
     )
     p_input = st.sidebar.slider(
         'p = ',
-        -30, 30, 0
+        -30.0, 30.0, 0.0
     )
     q_input = st.sidebar.slider(
         'q = ',
-        -30, 30, 0
+        -30.0, 30.0, 0.0
     )
     # inputを数字に限定するエラー処理
 
